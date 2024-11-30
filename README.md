@@ -1,7 +1,7 @@
 # shopyangu admin dashboard
 
 ## Build
-Theproject uses  pnpm for dependency manaementet.
+The project uses  pnpm for dependency manaementet.
 
 ```sh
 git clone https://github.com/andwati/shopyangu-admin-dashboard.git
@@ -21,6 +21,6 @@ pnpm dev
 
 ## stack
 
-nextjs
-chartjs
-tailwindcss
+- nextjs
+- chart.js
+- tailwindcss
