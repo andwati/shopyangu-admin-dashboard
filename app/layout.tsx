@@ -22,21 +22,18 @@ export default function RootLayout({
           <aside className="w-64 bg-white shadow-md">
             {/* Sidebar content */}
             <nav className="mt-5">
-              <Link
-                href="/"
-                className="block py-2 px-4 text-gray-600 hover:bg-gray-200"
-              >
+              <Link href="/" className="block py-2 px-4  hover:bg-gray-200">
                 Dashboard
               </Link>
               <Link
                 href="/shops"
-                className="block py-2 px-4 text-gray-600 hover:bg-gray-200"
+                className="block py-2 px-4  hover:bg-gray-200"
               >
                 Shops
               </Link>
               <Link
                 href="/products"
-                className="block py-2 px-4 text-gray-600 hover:bg-gray-200"
+                className="block py-2 px-4  hover:bg-gray-200"
               >
                 Products
               </Link>
