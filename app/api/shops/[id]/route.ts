@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server'
 
-let shops = [
+const shops = [
   { id: 1, name: 'Shop 1', description: 'Description for Shop 1', logo: '/placeholder.svg' },
   { id: 2, name: 'Shop 2', description: 'Description for Shop 2', logo: '/placeholder.svg' },
 ]
