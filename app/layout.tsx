@@ -1,18 +1,19 @@
-import type { Metadata } from "next"
-import { Inter } from "next/font/google"
-import "./globals.css"
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
+import "./globals.css";
+import Link from "next/link";
 
-const inter = Inter({ subsets: ["latin"] })
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "ShopYangu Admin",
   description: "Admin panel for ShopYangu e-commerce platform",
-}
+};
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="en">
@@ -21,17 +22,29 @@ export default function RootLayout({
           <aside className="w-64 bg-white shadow-md">
             {/* Sidebar content */}
             <nav className="mt-5">
-              <a href="/" className="block py-2 px-4 text-gray-600 hover:bg-gray-200">Dashboard</a>
-              <a href="/shops" className="block py-2 px-4 text-gray-600 hover:bg-gray-200">Shops</a>
-              <a href="/products" className="block py-2 px-4 text-gray-600 hover:bg-gray-200">Products</a>
+              <Link
+                href="/"
+                className="block py-2 px-4 text-gray-600 hover:bg-gray-200"
+              >
+                Dashboard
+              </Link>
+              <Link
+                href="/shops"
+                className="block py-2 px-4 text-gray-600 hover:bg-gray-200"
+              >
+                Shops
+              </Link>
+              <Link
+                href="/products"
+                className="block py-2 px-4 text-gray-600 hover:bg-gray-200"
+              >
+                Products
+              </Link>
             </nav>
           </aside>
-          <main className="flex-1 p-10 overflow-y-auto">
-            {children}
-          </main>
+          <main className="flex-1 p-10 overflow-y-auto">{children}</main>
         </div>
       </body>
     </html>
-  )
+  );
 }
-
