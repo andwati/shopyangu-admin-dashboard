@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, SetStateAction } from "react";
 import { ProductList } from "../../components/ProductList";
 import { ProductForm } from "../../components/ProductForm";
 
@@ -21,7 +21,7 @@ export default function Products() {
     });
   }, []);
 
-  const handleCreateProduct = (newProduct) => {
+  const handleCreateProduct = (newProduct: any) => {
     // API call to create product
     fetch("/api/products", {
       method: "POST",
@@ -35,7 +35,7 @@ export default function Products() {
       });
   };
 
-  const handleUpdateProduct = (updatedProduct) => {
+  const handleUpdateProduct = (updatedProduct: { id: any }) => {
     // API call to update product
     fetch(`/api/products/${updatedProduct.id}`, {
       method: "PUT",
@@ -54,7 +54,7 @@ export default function Products() {
       });
   };
 
-  const handleDeleteProduct = (productId) => {
+  const handleDeleteProduct = (productId: any) => {
     // API call to delete product
     fetch(`/api/products/${productId}`, { method: "DELETE" }).then(() => {
       setProducts(products.filter((product) => product.id !== productId));
@@ -83,7 +83,7 @@ export default function Products() {
       )}
       <ProductList
         products={products}
-        onEdit={(product) => {
+        onEdit={(product: SetStateAction<null>) => {
           setEditingProduct(product);
           setIsFormOpen(true);
         }}
