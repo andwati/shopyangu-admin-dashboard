@@ -1,9 +1,7 @@
-</ReactProject>
-
 import { NextResponse } from 'next/server'
 
 export async function GET() {
-  // In a real application, these would be calculated from actual data
+ 
   const topShops = [
     { name: 'Shop A', stockLevel: 500 },
     { name: 'Shop B', stockLevel: 450 },
